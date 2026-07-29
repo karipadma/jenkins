@@ -3,12 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/karipadma/jenkins.git'
-            }
-        }
+    
 
         stage('Terraform Init') {
             steps {
