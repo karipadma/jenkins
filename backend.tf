@@ -1,15 +1,8 @@
 terraform {
-
   backend "s3" {
-
-    bucket         = "terraform-paddhubucket"
-
-    key            = "jenkins/terraform.tfstate"
-
+    bucket        = "my-terraform-state"
+    key           = "terraform.tfstate"
     region         = "us-east-1"
-
-    dynamodb_table = "terraform-lock"
-
-    encrypt        = true
+    use_lockfile  = true
   }
 }
