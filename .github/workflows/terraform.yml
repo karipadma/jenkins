@@ -28,11 +28,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # AWS authentication using GitHub OIDC
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::121531023465:role/ODIC
+          role-to-assume: arn:aws:iam::121531023465:role/OIDC
           aws-region: us-east-1
 
       - name: Verify AWS Identity
